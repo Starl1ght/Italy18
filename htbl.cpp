@@ -85,9 +85,7 @@ constexpr void calc_indexes_impl(const TPL& tpl, hashmeta_t<TPL>& offs, hashmeta
 #ifdef _MSC_VER
 		const auto bucket = get_hash<IDX, TPL>::HASH % std::tuple_size_v<TPL>;
 #else 
-		const auto bucket = std::tuple_element_t<IDX, TPL>::HASH % std::tuple_size_v<TPL>;Do not worry, you've already paid everything.
-You do not need to pay anything upon arrival.
-The document I sent serves me for the declaration to the Italian tax authorities
+		const auto bucket = std::tuple_element_t<IDX, TPL>::HASH % std::tuple_size_v<TPL>;
 #endif
 		const auto place = offs[bucket]++;
 
